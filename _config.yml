@@ -2,7 +2,7 @@
 title: 锐玩道
 SEOTitle: 锐玩道 - 玩，玩出自己的特色
 header-img: img/post-bg-desk.jpg
-email: abo2013@foxmail.com
+# email: abo2013@foxmail.com
 description: "玩，玩出自己的特色"
 keyword: "php, golang, go, 程序员, 视频分析"
 url: "https://coderdao.github.io"          # your host, for absolute URL
@@ -13,8 +13,8 @@ github_repo: "https://github.com/coderdao/coderdao.github.io.git" # you code rep
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Play, play with my characteristics!"
 sidebar-avatar: /img/site/coderdao_ico.png      # use absolute URL, seeing it's used in both `/` and `/about/`
-sidebar-wx_gonghao: /img/site/vx_gonghao.jpg
-sidebar-wx_tieba: /img/site/vx_tieba.png
+sidebar-vxgonghao: /img/site/vxgonghao.jpg
+sidebar-vxtieba: /img/site/vxtieba.png
 
 
 

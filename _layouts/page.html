@@ -113,19 +113,19 @@ layout: default
                         {% endif %}
 
                         <!-- 公众号 -->
-                        {% if site.sidebar-wx_gonghao %}
+                        {% if site.sidebar-vxgonghao %}
                             <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">公众号</a></h5>
                             <a href="{{ site.baseurl }}/3-about">
-                                <img src="{{site.sidebar-wx_gonghao}}"/>
+                                <img src="{{site.sidebar-vxgonghao}}"/>
                             </a>
                         {% endif %}
                         
 
                         <!-- 微信圈子 -->
-                        {% if site.sidebar-wx_tieba %}
+                        {% if site.sidebar-vxtieba %}
                             <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">摸鱼贴吧</a></h5>
                             <a href="{{ site.baseurl }}/3-about">
-                                <img src="{{site.sidebar-wx_tieba}}"/>
+                                <img src="{{site.sidebar-vxtieba}}"/>
                             </a>
                         {% endif %}
                         
@@ -194,16 +194,6 @@ layout: default
                             </li>
                             {% endif %}
                             {% if site.github_username %}
-                            <li>
-                                <a target="_blank" href="https://github.com/{{ site.github_username }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% if site.wechat_username %}
                             <li>
                                 <a target="_blank" href="https://github.com/{{ site.github_username }}">
                                     <span class="fa-stack fa-lg">
