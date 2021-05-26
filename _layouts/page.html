@@ -100,7 +100,8 @@ layout: default
 
                 <!-- Short About -->
                 <section class="visible-md visible-lg">
-                    <hr><h5><a href="{{'/3-about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
+                    <hr>
+                    <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
                     <div class="short-about">
                         {% if site.sidebar-avatar %}
                             <a href="{{ site.baseurl }}/3-about">
@@ -110,6 +111,25 @@ layout: default
                         {% if site.sidebar-about-description %}
                             <p>{{site.sidebar-about-description}}</p>
                         {% endif %}
+
+                        <!-- 公众号 -->
+                        {% if site.sidebar-avatar %}
+                            <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">公众号</a></h5>
+                            <a href="{{ site.baseurl }}/3-about">
+                                <img src="{{site.sidebar-avatar}}"/>
+                            </a>
+                        {% endif %}
+                        
+
+                        <!-- 微信圈子 -->
+                        {% if site.sidebar-avatar %}
+                            <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">摸鱼贴吧</a></h5>
+                            <a href="{{ site.baseurl }}/3-about">
+                                <img src="{{site.sidebar-avatar}}"/>
+                            </a>
+                        {% endif %}
+                        
+                        
                         <!-- SNS Link -->
                         <ul class="list-inline">
                             {% if site.RSS %}
