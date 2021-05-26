@@ -13,6 +13,7 @@ github_repo: "https://github.com/coderdao/coderdao.github.io.git" # you code rep
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Play, play with my characteristics!"
 sidebar-avatar: /img/site/coderdao_ico.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-wx: /img/site/coderdao_vx.jpg
 
 
 
@@ -20,7 +21,8 @@ sidebar-avatar: /img/site/coderdao_ico.png      # use absolute URL, seeing it's 
 RSS: false
 # weibo_username:     qiubaiying
 # zhihu_username:     qiubaiying
-# github_username:    qiubaiying
+github_username:    coderdao
+wechat_username:    coderdao
 # facebook_username:  baiying.qiu.7
 # jianshu_username:   e71990ada2fd
 # twitter_username:   qiubaiying
