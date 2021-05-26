@@ -1,0 +1,95 @@
+---
+layout:     post
+title:      如何一台机器同时使用多个git秘钥
+subtitle:   如何一台机器同时使用多个git秘钥
+date:       2021-05-27
+author:     coderdao
+header-img: img/bg_img/post-bg-coffee.jpg
+catalog:      true
+theme: smartblue
+tags:
+    - git
+---
+
+> 如果❤️我的文章有帮助，欢迎点赞、关注。这是对我继续技术创作最大的鼓励。
+
+## 起因
+公司一个 gitlab 代码仓库;个人一个 github 代码仓库;
+
+然后最近 github 本来就慢，被`河蟹`之后丢包更严重了。所以为了不影响使用，又加了个国内码云 `gitee`；
+
+正巧重新配了下 仓库秘钥，做个记录方便之后换机器、重置系统再用。
+
+
+
+## 生成秘钥 
+> 为了方便说明，我假设需要重新配置全部秘钥。如果机器上已经配置好其它秘钥，直接生成新的秘钥（注意不要覆盖 `已经生成好` 的秘钥）
+
+使用终端 ssh命令 生成 rsa秘钥
+> ssh-keygen -t rsa -C "邮箱地址1" -f ~/.ssh/id_rsa_github
+
+-f 为秘钥存放地址。默认为`当前路径` 。一直回车下去，过程如下：
+
+![QQ截图20210524214918.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/01b2dc42ceae402e9c877ce63b3d70a6~tplv-k3u1fbpfcp-watermark.image)
+
+此时`~/.ssh`目录下会生成2个文件，分别对应 公钥`id_rsa_github.pub` 和 私钥`id_rsa_github` 。
+
+## 将公钥告诉git服务器
+
+打开公钥文件，复制里面内容。
+> vim id_rsa_github.pub
+
+登陆 `git服务器` (这里以github举例)。 github账户 > setting选项 > SSH and GPG keys，把 `公钥字符串` 粘贴里面的key输入框中，保存退出即可。
+
+![QQ截图20210524215702.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/da29a21ed05747609526bd2564f88c15~tplv-k3u1fbpfcp-watermark.image)
+
+通过命令 `ssh -T git@github.com` 测试，
+
+![QQ截图20210524215917.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d5047045333c4abfacb626d4279ee2a3~tplv-k3u1fbpfcp-watermark.image)
+如果出现上图提示，说明秘钥添加成功。
+
+## 配置多个秘钥
+我们重复步骤 `生成秘钥`、`将公钥告诉git服务器` 生成并配置新的秘钥后。
+在 `.ssh` 目录下面新建 `config文件`，文件内容如下：
+配置以下内容：
+```config
+Host github.com
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa_github
+    user coderdao
+
+Host gitee.com
+    HostName gitee.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa_gitee
+    user coderdao
+```
+HostName 指定秘钥使用域名，就能区分不同域名之间使用秘钥不同
+
+保存后，测试 `ssh -T git@github.com`、`ssh -T git@gitee.com`
+
+![QQ截图20210524220724.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4f00a0b0465843f9bba882c6e971f1d0~tplv-k3u1fbpfcp-watermark.image)
+上图所示，即配置多个git秘钥配置成功
+
+## 其他问题
+如果配置 `config` 文件后，未能生效。本地 `git` 软件的配置存在缓存，可使用以下命令判断秘钥是否生效：
+
+![QQ截图20210524221347.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6639557d416d4db49fbaa7b7e82b120f~tplv-k3u1fbpfcp-watermark.image)
+
+
+```shell
+$ cd ~/.ssh
+
+$ eval $(ssh-agent)
+Agent pid 3593
+
+$ exec ssh-agent bash
+
+$ ssh-add ~/.ssh/id_rsa_github
+Identity added: /c/Users/Administrator/.ssh/id_rsa_github
+
+$ ssh -T git@github.com
+Hi coderdao! You've successfully authenticated, but GitHub does not provide shell access.
+
+```
