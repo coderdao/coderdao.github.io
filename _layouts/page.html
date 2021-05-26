@@ -113,19 +113,19 @@ layout: default
                         {% endif %}
 
                         <!-- 公众号 -->
-                        {% if site.sidebar-avatar %}
+                        {% if site.sidebar-wx_gonghao %}
                             <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">公众号</a></h5>
                             <a href="{{ site.baseurl }}/3-about">
-                                <img src="{{site.sidebar-avatar}}"/>
+                                <img src="{{site.sidebar-wx_gonghao}}"/>
                             </a>
                         {% endif %}
                         
 
                         <!-- 微信圈子 -->
-                        {% if site.sidebar-avatar %}
+                        {% if site.sidebar-wx_tieba %}
                             <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">摸鱼贴吧</a></h5>
                             <a href="{{ site.baseurl }}/3-about">
-                                <img src="{{site.sidebar-avatar}}"/>
+                                <img src="{{site.sidebar-wx_tieba}}"/>
                             </a>
                         {% endif %}
                         
