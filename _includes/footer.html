@@ -58,17 +58,14 @@
                     </li>
                     {% endif %}
 
-
-                    {% if site.facebook_username %}
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/{{ site.facebook_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
+                    <!-- 公众号 -->
+                    {% if site.sidebar-vxgonghao %}
+                    <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">文章订阅📣</a></h5>
+                    <a href="{{ site.baseurl }}/3-about">
+                        <img src="{{site.sidebar-vxgonghao}}" style="width: 150px;height: 150px;"/>
+                    </a>
                     {% endif %}
+                    <!-- github -->
                     {% if site.github_username %}
                     <li>
                         <a target="_blank" href="https://github.com/{{ site.github_username }}">
@@ -79,15 +76,12 @@
                         </a>
                     </li>
                     {% endif %}
-                    {% if site.linkedin_username %}
-                    <li>
-                        <a target="_blank" href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
+                    <!-- 微信圈子 -->
+                    {% if site.sidebar-vxtieba %}
+                    <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">贴吧交流💬</a></h5>
+                    <a href="{{ site.baseurl }}/3-about">
+                        <img src="{{site.sidebar-vxtieba}}" style="width: 150px;height: 150px;"/>
+                    </a>
                     {% endif %}
                 </ul>
                 <p class="copyright text-muted">
