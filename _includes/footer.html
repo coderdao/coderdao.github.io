@@ -61,30 +61,19 @@
                     <!-- 公众号 -->
                     {% if site.sidebar-vxgonghao %}
                     <li>
-                        <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">文章订阅📣</a></h5>
                         <a href="{{ site.baseurl }}/3-about">
                             <img src="{{site.sidebar-vxgonghao}}" style="width: 150px;height: 150px;"/>
                         </a>
-                    </li>
-                    {% endif %}
-                    <!-- github -->
-                    {% if site.github_username %}
-                    <li>
-                        <a target="_blank" href="https://github.com/{{ site.github_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
+                        <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">文章订阅📣</a></h5>
                     </li>
                     {% endif %}
                     <!-- 微信圈子 -->
                     {% if site.sidebar-vxtieba %}
                     <li>
-                        <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">贴吧交流💬</a></h5>
                         <a href="{{ site.baseurl }}/3-about">
                             <img src="{{site.sidebar-vxtieba}}" style="width: 150px;height: 150px;"/>
                         </a>
+                        <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">贴吧交流💬</a></h5>
                     </li>
                     {% endif %}
                 </ul>
@@ -95,7 +84,7 @@
                     <iframe
                         style="margin-left: 2px; margin-bottom:-5px;"
                         frameborder="0" scrolling="0" width="100px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user={{ site.github_username }}&repo={{ site.github_username }}.github.io&type=star&count=true" >
+                        src="https://ghbtns.com/github-btn.html?user={{ site.github_username }}&type=star&count=true" >
                     </iframe>
                 </p>
             </div>
