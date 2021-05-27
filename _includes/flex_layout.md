@@ -10,7 +10,9 @@
 - 在线代码截图： https://www.dute.org/code-snapshot
 - 在线代码截图： https://carbon.now.sh/
 - gif压缩： https://ezgif.com/optimize
-- 聊天对话生成： qq_chart
+- 聊天对话生成： qq_chart 半截图半聊天
+
+============================================================
 
 
 
