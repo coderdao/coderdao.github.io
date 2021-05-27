@@ -60,10 +60,12 @@
 
                     <!-- 公众号 -->
                     {% if site.sidebar-vxgonghao %}
-                    <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">文章订阅📣</a></h5>
-                    <a href="{{ site.baseurl }}/3-about">
-                        <img src="{{site.sidebar-vxgonghao}}" style="width: 150px;height: 150px;"/>
-                    </a>
+                    <li>
+                        <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">文章订阅📣</a></h5>
+                        <a href="{{ site.baseurl }}/3-about">
+                            <img src="{{site.sidebar-vxgonghao}}" style="width: 150px;height: 150px;"/>
+                        </a>
+                    </li>
                     {% endif %}
                     <!-- github -->
                     {% if site.github_username %}
@@ -78,10 +80,12 @@
                     {% endif %}
                     <!-- 微信圈子 -->
                     {% if site.sidebar-vxtieba %}
-                    <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">贴吧交流💬</a></h5>
-                    <a href="{{ site.baseurl }}/3-about">
-                        <img src="{{site.sidebar-vxtieba}}" style="width: 150px;height: 150px;"/>
-                    </a>
+                    <li>
+                        <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">贴吧交流💬</a></h5>
+                        <a href="{{ site.baseurl }}/3-about">
+                            <img src="{{site.sidebar-vxtieba}}" style="width: 150px;height: 150px;"/>
+                        </a>
+                    </li>
                     {% endif %}
                 </ul>
                 <p class="copyright text-muted">
