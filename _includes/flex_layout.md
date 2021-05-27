@@ -12,8 +12,13 @@
 - gif压缩： https://ezgif.com/optimize
 - 聊天对话生成： qq_chart 半截图半聊天
 
+
+## github
+- 项目趋势榜 https://github.com/trending?since=weekly
+- star 趋势  https://star-history.t9t.io/#xinliangnote/go-gin-api&xinliangnote/Go&donnie4w/go-logger
+
 ============================================================
 
 
 
-> 如果❤️我的文章有帮助，欢迎点赞、关注。这是对我继续技术创作最大的鼓励。[更多往期内容在个人博客](https://coderdao.github.io/)
+> 如果❤️我的文章有帮助，欢迎点赞、关注。这是对我继续技术创作最大的鼓励。[更多往期文章在我的个人博客](https://coderdao.github.io/)
