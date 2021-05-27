@@ -4,7 +4,7 @@ title:      什么是mysql脏页
 subtitle:   什么是mysql脏页
 date:       2021-05-27
 author:     锐玩道
-header-img: img/bg_img/post-bg-art.jpg
+header-img: img/bg_img/post-bg-cook.jpg
 catalog:      true
 theme:      smartblue
 tags:
