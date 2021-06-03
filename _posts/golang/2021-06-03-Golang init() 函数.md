@@ -17,32 +17,7 @@ tags:
 # Golang init() 函数
 
 ## 先举个例子
-
-```go
-package main
-
-import "fmt"
-
-func init()  {
-	fmt.Println("init() 1:", a)
-}
-
-func init()  {
-	fmt.Println("init() 2:", a)
-}
-
-var a = 10
-const b = 100
-
-func main() {
-	fmt.Println("main() :", a)
-}
-
-// 执行结果
-// init() 1: 10
-// init() 2: 10
-// main() : 10
-```
+![图片描述](https://img1.sycdn.imooc.com/60b82c1f00015e4a16451326.png)
 
 ## init() 是什么
 在 `Go` 语言设计过程中保留了默认的两个函数，分别是 `main()` 和 `init()` 函数。
