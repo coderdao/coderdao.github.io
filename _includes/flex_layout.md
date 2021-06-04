@@ -4,6 +4,7 @@
 - 公众号：https://mp.weixin.qq.com/cgi-bin/appmsg?begin=0&count=10&type=10&action=list_card
 - 掘金：https://juejin.cn/editor/drafts/new?v=2
 - 今日头条：https://mp.toutiao.com/profile_v4/graphic/publish
+- 知乎（seo）：https://zhuanlan.zhihu.com/write
 
 
 ## 文章格式工具
