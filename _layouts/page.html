@@ -112,6 +112,16 @@ layout: default
                             <p>{{site.sidebar-about-description}}</p>
                         {% endif %}
                         
+                        <!-- 公众号 -->
+                        {% if site.sidebar-vxgonghao %}
+                        <li>
+                            <a href="{{ site.baseurl }}/3-about">
+                                <img src="{{site.sidebar-vxgonghao}}" style="width: 150px;height: 150px;"/>
+                            </a>
+                            <h5><a href="{{'/3-about/' | prepend: site.baseurl }}">文章订阅📣</a></h5>
+                        </li>
+                        {% endif %}
+
                         <!-- SNS Link -->
                         <ul class="list-inline">
                             {% if site.RSS %}
