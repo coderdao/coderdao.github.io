@@ -1,3 +1,7 @@
+## 参加的活动
+0619-0718：文字赚视频两份: https://mp.toutiao.com/profile_v3_public/public/activity/?id=1702722732523527
+0601-0630：解决一个月原创技术文更新: https://juejin.cn/post/6967194882926444557
+
 ## 只要发布平台
 - 慕课手机(首发图床)：https://www.imooc.com/article/publish
 - 个人博客：https://coderdao.github.io/
